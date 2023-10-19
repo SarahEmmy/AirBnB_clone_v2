@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """Compress web static package
 """
-from fabric.api import *
-from datetime import datetime
-from os import path
+from fabric.api import put, run, env
+from os.path import exists
 
-
-env.hosts = ['34.236.171.16', '3.237.45.190']
+env.hosts = ['34.229.56.37', '34.229.66.45']
 env.user = 'ubuntu'
-env.key_filename = '~/.ssh/id_rsa'
+env.key_filename = '~/.ssh/school'
 
 
 def do_deploy(archive_path):
